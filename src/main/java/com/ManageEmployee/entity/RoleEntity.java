@@ -7,9 +7,9 @@ import java.util.Set;
 @Entity
 @Table(name = "role")
 public class RoleEntity extends BaseEntity {
-    @Column(name = "code")
+    @Column(name = "code",columnDefinition = "NVARCHAR(255)")
     private String code;
-    @Column(name = "name")
+    @Column(name = "name",columnDefinition = "NVARCHAR(255)")
     private String name;
 
     @ManyToMany(fetch = FetchType.LAZY)

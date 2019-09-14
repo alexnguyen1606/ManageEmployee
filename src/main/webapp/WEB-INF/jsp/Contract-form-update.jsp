@@ -15,12 +15,15 @@
 <div class="right-panel" id="right-panel">
     <jsp:include page="/template/component/header.jsp"></jsp:include>
     <div class="col-lg-8">
+        <h2>Contract Update </h2>
         <form:form action="/category/contract/add" method="post"  modelAttribute="viewmodel" cssClass="form-group">
             <form:hidden path="id"></form:hidden>
             <form:label path="code">Code:</form:label>
             <form:input path="code" cssClass="form-control" required="required"></form:input>
             <form:label path="type">Type:</form:label>
             <form:input path="type" cssClass="form-control"></form:input>
+            <form:label path="term">Term(months):</form:label>
+            <form:input path="term" cssClass="form-control"></form:input>
             <form:label path="description">Description:</form:label>
             <form:input path="description" cssClass="form-control"></form:input>
             <button type="submit" class="btn btn-success">Add</button>

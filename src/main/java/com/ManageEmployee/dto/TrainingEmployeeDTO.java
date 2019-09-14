@@ -10,7 +10,6 @@ public class TrainingEmployeeDTO extends BaseDTO {
 
     private String result;
 
-
     private String description;
 
     private TrainingDTO training;

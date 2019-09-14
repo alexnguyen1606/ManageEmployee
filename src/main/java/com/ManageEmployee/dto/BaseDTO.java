@@ -8,7 +8,7 @@ public class BaseDTO {
     private String createdBy;
     private Date modifiedDate;
     private String modifiedBy;
-
+    private Integer status;
     public Integer getId() {
         return id;
     }
@@ -47,5 +47,13 @@ public class BaseDTO {
 
     public void setModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

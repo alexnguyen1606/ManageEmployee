@@ -9,7 +9,8 @@ public class PartDTO extends BaseDTO {
 
     private String description;
 
-    private List<DepartmentDTO> listDepartment = new ArrayList<>();
+    private DepartmentDTO department;
+
 
     public String getName() {
         return name;
@@ -27,11 +28,11 @@ public class PartDTO extends BaseDTO {
         this.description = description;
     }
 
-    public List<DepartmentDTO> getListDepartment() {
-        return listDepartment;
+    public DepartmentDTO getDepartment() {
+        return department;
     }
 
-    public void setListDepartment(List<DepartmentDTO> listDepartment) {
-        this.listDepartment = listDepartment;
+    public void setDepartment(DepartmentDTO department) {
+        this.department = department;
     }
 }

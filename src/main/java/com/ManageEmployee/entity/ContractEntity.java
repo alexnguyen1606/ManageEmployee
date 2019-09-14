@@ -7,12 +7,14 @@ import java.util.Set;
 @Entity
 @Table(name = "contract")
 public class ContractEntity extends BaseEntity {
-    @Column(name = "code")
+    @Column(name = "code",columnDefinition = "NVARCHAR(255)")
     private String code;
     @Column(name = "type")
     private int type;
-    @Column(name = "description")
+    @Column(name = "description",columnDefinition = "NVARCHAR(255)")
     private String description;
+    @Column(name = "term")
+    private Integer term;
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "contract",cascade = CascadeType.ALL)
     private Set<ContractEmployeeEntity> listContractEmployee = new HashSet<>();
 
@@ -46,5 +48,13 @@ public class ContractEntity extends BaseEntity {
 
     public void setListContractEmployee(Set<ContractEmployeeEntity> listContractEmployee) {
         this.listContractEmployee = listContractEmployee;
+    }
+
+    public Integer getTerm() {
+        return term;
+    }
+
+    public void setTerm(Integer term) {
+        this.term = term;
     }
 }

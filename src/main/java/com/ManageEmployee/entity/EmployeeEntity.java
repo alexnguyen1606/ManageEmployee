@@ -1,14 +1,14 @@
 package com.ManageEmployee.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "employee")
 public class EmployeeEntity extends BaseEntity{
-    @Column(name="fullname")
+    @Column(name="fullname",columnDefinition = "NVARCHAR(255)")
     private String fullName;
     @Column(name = "birthday")
     private Date birthDay;
@@ -16,9 +16,9 @@ public class EmployeeEntity extends BaseEntity{
     private int gender;
     @Column(name = "number_insurence")
     private int numberInsurence;
-    @Column(name = "address")
+    @Column(name = "address",columnDefinition = "NVARCHAR(255)")
     private String address;
-    @Column(name = "phone_number")
+    @Column(name = "phone_number",columnDefinition = "NVARCHAR(255)")
     private String phoneNumber;
     @Column(name = "type")
     private int type;

@@ -1,4 +1,6 @@
 package com.ManageEmployee.service;
 
-public interface IDepartmentService {
+import com.ManageEmployee.dto.DepartmentDTO;
+
+public interface IDepartmentService extends GenericService<DepartmentDTO>{
 }

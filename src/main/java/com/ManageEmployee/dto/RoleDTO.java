@@ -1,7 +1,9 @@
 package com.ManageEmployee.dto;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class RoleDTO extends BaseDTO {
 
@@ -10,7 +12,7 @@ public class RoleDTO extends BaseDTO {
     private String name;
 
 
-    private List<UserDTO> listUser = new ArrayList<>();
+    private Set<UserDTO> listUser = new HashSet<>();
 
     public String getCode() {
         return code;
@@ -28,11 +30,11 @@ public class RoleDTO extends BaseDTO {
         this.name = name;
     }
 
-    public List<UserDTO> getListUser() {
+    public Set<UserDTO> getListUser() {
         return listUser;
     }
 
-    public void setListUser(List<UserDTO> listUser) {
+    public void setListUser(Set<UserDTO> listUser) {
         this.listUser = listUser;
     }
 }

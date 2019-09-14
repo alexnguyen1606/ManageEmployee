@@ -1,4 +1,7 @@
 package com.ManageEmployee.repository;
 
-public interface DepartmentRepository {
+import com.ManageEmployee.entity.DepartmentEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface DepartmentRepository extends JpaRepository<DepartmentEntity,Integer> {
 }

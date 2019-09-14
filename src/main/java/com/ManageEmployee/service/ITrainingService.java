@@ -1,4 +1,10 @@
 package com.ManageEmployee.service;
 
-public interface ITrainingService {
+import com.ManageEmployee.dto.TrainingDTO;
+
+import java.util.List;
+
+public interface ITrainingService extends GenericService<TrainingDTO> {
+
+    List<TrainingDTO> findAllByStatus(Integer id);
 }

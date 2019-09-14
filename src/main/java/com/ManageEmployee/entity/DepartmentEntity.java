@@ -7,17 +7,16 @@ import java.util.Set;
 @Entity
 @Table(name = "department")
 public class DepartmentEntity extends BaseEntity{
-    @Column(name = "name")
+    @Column(name = "name",columnDefinition = "NVARCHAR(255)")
     private String name;
-    @Column(name = "description")
+    @Column(name = "description",columnDefinition = "NVARCHAR(255)")
     private String description;
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "department")
     private Set<EmployeeEntity> listEmployee = new HashSet<>();
 
-    @ManyToOne
-    @JoinColumn(name = "part_id")
-    private PartEntity part;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "department")
+    private Set<PartEntity> listPart = new HashSet<>();
 
     public String getName() {
         return name;
@@ -43,11 +42,11 @@ public class DepartmentEntity extends BaseEntity{
         this.listEmployee = listEmployee;
     }
 
-    public PartEntity getPart() {
-        return part;
+    public Set<PartEntity> getListPart() {
+        return listPart;
     }
 
-    public void setPart(PartEntity part) {
-        this.part = part;
+    public void setListPart(Set<PartEntity> listPart) {
+        this.listPart = listPart;
     }
 }

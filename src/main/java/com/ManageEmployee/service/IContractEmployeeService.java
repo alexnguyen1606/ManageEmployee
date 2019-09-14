@@ -1,4 +1,10 @@
 package com.ManageEmployee.service;
 
-public interface IContractEmployee {
+import com.ManageEmployee.dto.ContractEmployeeDTO;
+
+import java.util.List;
+
+public interface IContractEmployeeService extends GenericService<ContractEmployeeDTO> {
+    public List<ContractEmployeeDTO> findAllByEmployee_Id(Integer employeeId);
+    public List<ContractEmployeeDTO> findAllEmployeeExpires();
 }

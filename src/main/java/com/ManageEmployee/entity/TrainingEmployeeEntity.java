@@ -3,7 +3,7 @@ package com.ManageEmployee.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Table(name = "training_employee")
@@ -12,10 +12,9 @@ public class TrainingEmployeeEntity extends BaseEntity {
     private Date startDate;
     @Column(name = "end_date")
     private Date endDate;
-    @Column(name = "result")
+    @Column(name = "result",columnDefinition = "NVARCHAR(255)")
     private String result;
-
-    @Column(name = "description")
+    @Column(name = "description",columnDefinition = "NVARCHAR(255)")
     private String description;
     @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
     @JoinColumn(name = "training_id")

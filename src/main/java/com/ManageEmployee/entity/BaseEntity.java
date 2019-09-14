@@ -7,7 +7,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+
 import java.util.Date;
 
 @MappedSuperclass
@@ -17,7 +17,7 @@ public class BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @CreatedDate
+    @CreationTimestamp
     @JsonIgnore
     @Column(name = "created_date")
     private Date createdDate;
@@ -26,7 +26,7 @@ public class BaseEntity {
     private String createdBy;
 
     //@UpdateTimestamp
-    @LastModifiedDate
+    @UpdateTimestamp
     @Column(name = "modified_date")
     private Date modifiedDate;
 

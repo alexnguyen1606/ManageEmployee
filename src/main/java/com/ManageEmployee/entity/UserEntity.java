@@ -6,14 +6,14 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Table(name ="user")
+@Table(name ="users")
 @Entity
 public class UserEntity  extends BaseEntity{
     @Column(name="username")
     private String username;
     @Column(name="password")
     private String password;
-    @Column(name = "email")
+    @Column(name = "email",columnDefinition = "NVARCHAR(255)")
     private String email;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_role",joinColumns = {@JoinColumn(name = "user_id")},

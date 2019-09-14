@@ -11,6 +11,7 @@ public class TrainingDTO extends BaseDTO {
 
     private String description;
 
+    private Integer totalTime;
     private List<TrainingEmployeeDTO> listTrainingEmployee = new ArrayList<>();
 
     public String getCode() {
@@ -43,5 +44,13 @@ public class TrainingDTO extends BaseDTO {
 
     public void setListTrainingEmployee(List<TrainingEmployeeDTO> listTrainingEmployee) {
         this.listTrainingEmployee = listTrainingEmployee;
+    }
+
+    public Integer getTotalTime() {
+        return totalTime;
+    }
+
+    public void setTotalTime(Integer totalTime) {
+        this.totalTime = totalTime;
     }
 }

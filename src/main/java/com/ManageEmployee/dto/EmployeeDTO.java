@@ -2,7 +2,9 @@ package com.ManageEmployee.dto;
 
 
 
-import java.sql.Date;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ import java.util.List;
 public class EmployeeDTO extends BaseDTO {
 
     private String fullName;
-
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date birthDay;
 
     private int gender;

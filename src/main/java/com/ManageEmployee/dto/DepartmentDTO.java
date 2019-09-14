@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DepartmentDTO {
+public class DepartmentDTO extends BaseDTO{
 
     private String name;
 
@@ -15,7 +15,7 @@ public class DepartmentDTO {
 
     private List<EmployeeDTO> listEmployee = new ArrayList<>();
 
-    private PartDTO part;
+    private List<PartDTO> listPart;
 
     public String getName() {
         return name;
@@ -41,11 +41,11 @@ public class DepartmentDTO {
         this.listEmployee = listEmployee;
     }
 
-    public PartDTO getPart() {
-        return part;
+    public List<PartDTO> getListPart() {
+        return listPart;
     }
 
-    public void setPart(PartDTO part) {
-        this.part = part;
+    public void setListPart(List<PartDTO> listPart) {
+        this.listPart = listPart;
     }
 }

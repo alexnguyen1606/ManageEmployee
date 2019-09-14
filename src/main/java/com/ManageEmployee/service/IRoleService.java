@@ -1,4 +1,7 @@
 package com.ManageEmployee.service;
 
-public class IRoleService {
+import com.ManageEmployee.dto.RoleDTO;
+
+public interface IRoleService  extends GenericService<RoleDTO>{
+    public RoleDTO findByCode(String code);
 }

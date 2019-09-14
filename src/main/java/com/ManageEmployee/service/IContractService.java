@@ -1,4 +1,8 @@
 package com.ManageEmployee.service;
 
-public interface IContractService {
+import com.ManageEmployee.dto.ContractDTO;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface IContractService extends GenericService<ContractDTO> {
 }
